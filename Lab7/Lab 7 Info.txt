@@ -1,0 +1,52 @@
+Lab 7 Info
+******************************************************************
+METHOD DECLARATIONS:
+calcHash: Converts all the characters within a given string to ASCII values and sums them up, then outputs 
+		  an index by modding this sum with the mapSize.
+		  
+calcHash2: Converts the first 3 characters within a given string to base-29 integers and multiply each by 
+		   their ASCII value. Sum up these integers and mod it with the mapSize. (Ex. calcHash2("abcd") == 
+		   29^0*97 + 29^1*98 + 29^3*99)
+		   
+collHash1: Hash the given keyword to an index. If the index is filled, move to the next slot. Continue this 
+		   process until there is an empty slot or the given keyword matches the one that is already in the 
+		   slot. If it reaches the end of the array, loop back to the beginning of the loop. (Linear Probing)
+		   
+collHash2: Hash the given keyword to an index of h+t^2, where t starts with 0 and increment by 1 if the slot 
+		   of the index is filled. Similar to Linear Probing, continue the process until there is an empty 
+		   slot of the given keyword matches the one that is already in the slot. (Ex. If h+0^2 is filled, 
+		   then move on to h+1^2, then h+2^2, then h+3^2, etc) (Quadradic Probing)
+
+******************************************************************
+COLLISION COUNTS:
+calcHash_collHash1.txt (Using calcHash and collHash1 methods)
+collisionct1 = 6970
+collisionct2 = 4053658
+
+calcHash_collHash2.txt (Using calcHash and collHash2 methods)
+collisionct1 = 6866
+collisionct2 = 137186
+
+calcHash2_collHash1.txt (Using calcHash2 and collHash1 methods)
+collisionct1 = 6140
+collisionct2 = 86779
+
+calcHash2_collHash2.txt (Using calcHash2 and collHash2 methods)
+collisionct1 = 6075
+collisionct2 = 30019
+
+******************************************************************
+FAVORITE PHRASES:
+Today is on you know, up the ship, and the trees have no fear of the South!
+
+But I'm sending them run for the cake!
+
+And deep enough you like to get mighty King Yertle.
+
+There's no birds as they can't let them away.
+
+I'm king, and you like them with great Grinchy trick!
+
+Games you dare to get out of them out!
+
+
